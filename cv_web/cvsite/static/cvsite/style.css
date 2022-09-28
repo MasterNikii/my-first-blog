@@ -1,0 +1,33 @@
+.Immagine{
+    max-width: 500px;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+  .Barre{
+    padding-top: 20px;
+    margin-right: 600px;
+  }
+  .Testo{
+    text-align: center;
+    padding-top: 15px;
+  }
+  .recensioni{
+    background-color: rgb(160, 157, 157);
+    font-size: 60px;
+    color: rgb(85, 83, 83);
+    text-align: center;
+    margin-top: 50px;
+  }
+  .Aquile{
+    background-color: rgb(160, 157, 157);
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .card{
+    margin: 20px;
+  }
+  .navbarbella{
+    display: flex;
+    align-items: center;
+  }

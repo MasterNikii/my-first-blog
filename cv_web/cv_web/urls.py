@@ -18,6 +18,6 @@ from django.urls import path
 from cvsite import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.cvsite)
+    path('', views.cvsite, name='home'),
+    path('contatti', views.contatti, name='contatti')
 ]
