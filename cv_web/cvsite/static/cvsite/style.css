@@ -31,3 +31,12 @@
     display: flex;
     align-items: center;
   }
+  .contatti2{
+    padding-left: 60px;
+    padding-right: 50px;
+
+  }
+.mappa{
+  min-width: 398px;
+  min-height: 300px;
+}
