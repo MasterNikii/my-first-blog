@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Homepage</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'cvsite/style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
@@ -26,11 +26,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Homepage</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Homepage</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'contatti' %}"  style="color:black ;">Contatti!</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'curriculum' %}"  style="color:black ;">Curriculum!</a>
+              </li>
+            
             </li>
           </ul>
    
@@ -99,22 +102,6 @@
 
     </div>
 
-
-
-
-
-    <!--
-      {% for cvelement in cvelements %}
-    <div>
-      <h3>{{ cvelement.nome }}</h3>
-      <p>Da {{cvelement.start }} a {{cvelement.end}}</p>
-      <hr />
-      <div>{{cvelement.riassunto}}</div>
-      <hr />
-    </div>
-    {% endfor %}
-    <img src="https://www.adobe.com/it/express/create/media_127a4cd0c28c2753638768caf8967503d38d01e4c.jpeg?width=400&format=jpeg&optimize=medium" alt="Bootstrap" width="60" height="54">
-    -->
 
   
     

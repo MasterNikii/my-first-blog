@@ -40,3 +40,8 @@
   min-width: 398px;
   min-height: 300px;
 }
+.TitoliNoti{
+  display: flex;
+  justify-content: space-between;
+}
+

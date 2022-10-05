@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'cvsite/style.css' %}">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'cvsite/style2.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            {% load static %}
+            <img src="{% static 'cvsite/logo.jpeg' %}" alt="" alt="Bootstrap" width="60" height="54">
+          </a>
+          <a class="navbar-brand" href="#">Aquila Gigante</a>
+  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Homepage</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contatti' %}"  style="color:black ;">Contatti!</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'curriculum' %}"  style="color:black ;">Curriculum!</a>
+              </li>
+            </ul>
+     
+          </div>
+        </div>
+      </nav>
+    </div>
+      <div>
+        <div class="Nomes">
+            {% load static %}
+            <img src="{% static 'cvsite/Curri.jpg' %}" alt="" class="Immagine3">
+            <div>
+                <h1 class="Niki">Nikita Coppola</h1>
+                <h1 class="Profe">Professione: Nullafacente</h1>
+            </div>
+        </div>
+        <div class="Stupidu">
+            <div class="col">
+                <div class="card shadow ">
+                    {% for cvelement in cucinas %}
+                  <div class="card-body">
+                    <!-- <small class="text-muted"></small> -->
+                    <strong style="color:rgb(29, 61, 86);" >{{ cvelement.nome }}</strong>
+                    <p class="card-text">
+                      {{ cvelement.descrizione}}
+                    </p>
+                    <p class="card-text">
+                        {{ cvelement.riassunto}}
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <!-- <button
+                          type="button"
+                          class="btn btn-sm btn-outline-secondary"
+                        >
+                          View
+                        </button> -->
+    
+                      </div>
+                    
+                      <small class="text-muted"><strong>Da: </strong><span>{{cvelement.start}}</span> <span> - </span><strong> A: </strong><span>{{cvelement.end}}</span></small>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+        </div>
+        <div class="TitoliNoti">
+            <div class="Skills2">
+                <h4>Contatto personale:</h4>
+                <h4>+3912345678</h4>
+                <h4>Contatto email:</h4>
+                <h4><a href="mailto:nikitacoppola00@gmail.com"> nonhounamail@gmail.com</a></h4>
+                <h4>Indirizzo casa:</h4>
+                <h4> <a href="https://www.google.it/maps/place/Corea+del+Nord/@40.2829282,125.1811196,7z/data=!3m1!4b1!4m5!3m4!1s0x357e02dae64f4337:0x3a0b871c3e1d861c!8m2!3d40.339852!4d127.510093?ucbcb=1">Vivo Qui</a></h4>
+            </div>
+            <div class="Skills">
+                <h3>Skill:</h3>
+                <h4>- Videogiocatore</h4>
+                <h4>- Mangiatore seriale</h4>
+                <h4>- Dormitore Professionista</h4>
+                <h4>- Programmatore di ultimo livello</h4>
+            </div>
+                
+        </div>
+</body>
+</html>
