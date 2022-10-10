@@ -37,4 +37,22 @@
 .Skills2{
     margin-left: 50px;
 }
-
+.BottoneC{
+    text-align: center;
+    padding-top: 50px;
+    background-color: rgb(150, 47, 47);
+}
+.Bottones{
+    text-align: center;
+    padding-top: 10px;
+    background-color: rgb(150, 47, 47);
+    padding-bottom: 20px;
+}
+.Bottoneaaa{
+    background-color: blue;
+    color: black;
+    border: 2px solid black;
+    font-size: 30px;
+    border-radius: 20px;
+    padding: 20px;
+}
