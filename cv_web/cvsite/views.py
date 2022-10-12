@@ -3,6 +3,8 @@ from .models import Cucina, cvelement
 import mimetypes
 import os
 from django.http.response import HttpResponse
+from django.http import Http404
+
 
 # Create your views here.
 def cvsite(request):
@@ -24,3 +26,11 @@ def download_file(request):
     response = HttpResponse(path, content_type=mime_type)
     response['Content-Disposition'] = "attachment; filename=%s" % filename
     return response
+
+def detail(request, cvelement_id):
+    try:
+        print('cv element id: %s' % cvelement_id)
+    except cvelement.DoesNotExist:
+        raise Http404("CV element does not exist")
+    return render(request, 'cvsite/detail.html', {'element': cvelement_id})
+

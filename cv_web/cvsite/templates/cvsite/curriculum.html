@@ -47,7 +47,7 @@
       <div>
         <div class="Nomes">
             {% load static %}
-            <img src="{% static 'cvsite/Curri.jpg' %}" alt="" class="Immagine3">
+            <img src="" alt="" class="Immagine3">
             <div>
                 <h1 class="Niki">Nikita Coppola</h1>
                 <h1 class="Profe">Professione: Nullafacente</h1>
@@ -59,7 +59,7 @@
                     {% for cvelement in cucinas %}
                   <div class="card-body">
                     <!-- <small class="text-muted"></small> -->
-                    <strong style="color:rgb(29, 61, 86);" >{{ cvelement.nome }}</strong>
+                    <a href="{% url 'detail' cvelement.id %}"><strong style="color:rgb(29, 61, 86);" >{{ cvelement.nome }}</strong></a>
                     <p class="card-text">
                       {{ cvelement.descrizione}}
                     </p>

@@ -89,7 +89,7 @@
           <h5 class="card-title">{{ cvelement.nome }}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{cvelement.descrizione}}</h6>
           <p class="card-text">{{cvelement.riassunto}}</p>
-          <a href="#" class="card-link">Card link</a>
+          <a class="btn" href="{% url 'detail' cvelement.id %}">esplora</a>
         </div>
       </div>
       <br>
