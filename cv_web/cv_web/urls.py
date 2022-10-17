@@ -24,6 +24,8 @@ urlpatterns = [
     path('contatti', views.contatti, name='contatti'),
     path('curriculum', views.curriculum, name='curriculum'),
     path('cv-download/', views.download_file, name="cv-download"),
-    path('<int:cvelement_id>/', views.detail, name='detail'),
+    path('detail/<int:cvelement_id>/', views.detail, name='detail'),
+    path('hellllp/<int:cucina_id>/', views.hellllp, name='hellllp'),
+
 
 ]

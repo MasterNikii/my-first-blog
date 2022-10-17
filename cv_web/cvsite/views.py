@@ -28,9 +28,22 @@ def download_file(request):
     return response
 
 def detail(request, cvelement_id):
+
     try:
-        print('cv element id: %s' % cvelement_id)
+        element = cvelement.objects.get(pk=cvelement_id)
+
     except cvelement.DoesNotExist:
         raise Http404("CV element does not exist")
-    return render(request, 'cvsite/detail.html', {'element': cvelement_id})
+    return render(request, 'cvsite/detail.html', {'element': element})
+
+
+
+def hellllp(request, cucina_id):
+
+    try:
+        cucina = Cucina.objects.get(pk=cucina_id)
+
+    except Cucina.DoesNotExist:
+        raise Http404("CV element does not exist")
+    return render(request, 'cvsite/hellllp.html', {'element': cucina})
 

@@ -4,7 +4,7 @@ import datetime
 
 class cvelement(models.Model):
     nome = models.CharField(max_length=100, default=None)
-    descrizione = models.CharField(max_length=60, default=None)
+    descrizione = models.CharField(max_length=10000, default=None)
     riassunto = models.CharField(max_length=500, default=None)
     start = models.DateField(("Date"), default=datetime.date.today)
     end = models.DateField(default=None, blank=True, null=True)
@@ -14,7 +14,7 @@ class cvelement(models.Model):
 
 class Cucina(models.Model):
     nome = models.CharField(max_length=100, default=None)
-    descrizione = models.CharField(max_length=60, default=None)
+    descrizione = models.CharField(max_length=10000, default=None)
     riassunto = models.CharField(max_length=500, default=None)
     start = models.DateField(("Date"), default=datetime.date.today)
     end = models.DateField(default=None, blank=True, null=True)
